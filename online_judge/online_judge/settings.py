@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'online_judge.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'onlinejudge',      # 你的 PostgreSQL 資料庫名稱
+        'USER': 'onlinejudge',      # 資料庫使用者
+        'PASSWORD': 'rL2&UmM4DyVTg^ae',  # 資料庫密碼
+        'HOST': 'localhost',         # 本機連線
+        'PORT': '5432',              # 預設 PostgreSQL 連接埠
     }
 }
 
