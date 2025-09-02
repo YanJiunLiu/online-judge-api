@@ -1,0 +1,14 @@
+[project]
+name = "online-judge-api"
+version = "0.1.0"
+description = "Using LangChain to create a online judge system"
+readme = "README.md"
+authors = [
+    { name = "yanjiunliu", email = "ggyy831214@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "django-filter>=25.1",
+    "djangorestframework==3.16.1",
+    "markdown>=3.8.2",
+]
