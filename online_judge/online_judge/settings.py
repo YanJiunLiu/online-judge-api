@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    ## new adds
+    'rest_framework',
+    'l1m.apps.L1MConfig'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,20 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# https://drf-spectacular.readthedocs.io/en/latest/settings.html
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Online Judge",
+    "DESCRIPTION": "Online Judge platform",
+    "VERSION": "1.0.0",
+    "SCHEMA_PATH_PREFIX": r".*(schema/)$",
+    "SCHEMA_PATH_PREFIX_TRIM": False,
+    "DEFAULT_GENERATOR_CLASS": "online_judge.generators.SchemaGenerator",
+    "SWAGGER_UI_SETTINGS": {
+        "deepLinking": False,
+        "displayOperationId": True,
+        "displayRequestDuration": True,
+        "filter": True,
+    },
+    "COMPONENT_SPLIT_REQUEST": True,
+}
